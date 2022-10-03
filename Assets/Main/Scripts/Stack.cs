@@ -9,6 +9,8 @@ namespace PROJECT_STACK_RUNNER
 		public Renderer rnd;
 		public Rigidbody rb;
 		private Coroutine _moveRoutine;
+		public Collider collider;
+		internal bool IsReplace;
 
 		private Vector3 XVector => new Vector3(transform.localScale.x,0,0);
 		public float LeftMostCenter => (transform.position - XVector * .5f).x;
@@ -25,6 +27,23 @@ namespace PROJECT_STACK_RUNNER
 		{
 			rnd = GetComponentInChildren<Renderer>();
 			rb = GetComponent<Rigidbody>();
+			collider = GetComponentInChildren<Collider>();
+		}
+
+		public void Fall()
+		{
+			rb.velocity = Vector3.zero;
+			rb.angularVelocity = Vector3.zero;
+			rb.isKinematic = false;
+			collider.isTrigger = true;
+		}
+
+		public void ResetStack()
+		{
+			rb.velocity = Vector3.zero;
+			rb.angularVelocity = Vector3.zero;
+			rb.isKinematic = true;
+			collider.isTrigger = false;
 		}
 
 		public void Stop()

@@ -8,7 +8,8 @@ namespace PROJECT_STACK_RUNNER
 		{
 			if(other.TryGetComponent(out Stack stack))
 			{
-				StackController.Instance.ReplacePool.Release(stack);
+				if(stack.IsReplace) StackController.Instance.ReplacePool.Release(stack);
+				else StackController.Instance.StackPool.Release(stack);
 			}
 		}
 	}

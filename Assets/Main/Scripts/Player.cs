@@ -1,4 +1,5 @@
 using System;
+using PROJECT_STACK_RUNNER.Collectibles;
 using UnityEngine;
 
 namespace PROJECT_STACK_RUNNER
@@ -39,6 +40,11 @@ namespace PROJECT_STACK_RUNNER
 		{
 			animator = GetComponentInChildren<Animator>();
 			cc = GetComponent<CharacterController>();
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+			if(other.TryGetComponent(out ICollectible collectible)) collectible.Collect();
 		}
 
 		private void Update()

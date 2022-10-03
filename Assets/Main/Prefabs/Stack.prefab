@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rnd: {fileID: 1949365765312076381}
-  localScale: {x: 0, y: 0, z: 0}
+  rb: {fileID: 5810466548960340755}
 --- !u!33 &1949365765312076380
 MeshFilter:
   m_ObjectHideFlags: 0
