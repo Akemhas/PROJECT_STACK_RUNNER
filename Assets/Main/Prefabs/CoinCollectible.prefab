@@ -51,7 +51,7 @@ MonoBehaviour:
   destroyDuration: 0.35
   collectParticle: {fileID: 7011790981303065579, guid: 14daa27190f5ab949987d635cdbc5801,
     type: 3}
-  rotationSpeed: 3
+  rotationSpeed: 2
   moveUpDown: 0
 --- !u!65 &2413069256562330305
 BoxCollider:

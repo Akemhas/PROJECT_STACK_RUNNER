@@ -97,6 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036db9aeffe6f49dcb509c72f43197f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectiblePrefabs:
+  - {fileID: 2413069256562330307, guid: 721ec9d8957094520b47f4fe72b29b43, type: 3}
+  - {fileID: 7874450785020389413, guid: cd94a8ba2fa594a8e87fe7fb10b498cf, type: 3}
+  - {fileID: 2413069256562330307, guid: 43c86ecbad224490f93262a82319fe5d, type: 3}
+  spawnAmount: 6
 --- !u!65 &-8707243506579807248
 BoxCollider:
   m_ObjectHideFlags: 0

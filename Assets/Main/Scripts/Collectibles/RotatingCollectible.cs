@@ -15,7 +15,7 @@ namespace PROJECT_STACK_RUNNER.Collectibles
 
 		private void Start()
 		{
-			if(moveUpDown) MoveY(transform.position.y + .33f,2f);
+			if(moveUpDown) MoveY(transform.position.y + .75f,2f);
 		}
 
 		public void MoveY(float endTarget,float duration)
@@ -38,8 +38,7 @@ namespace PROJECT_STACK_RUNNER.Collectibles
 				if(elapsedTime >= duration)
 				{
 					elapsedTime = 0;
-					startPos = transform.position;
-					targetPos.y *= -1;
+					(startPos,targetPos) = (targetPos,startPos);
 				}
 			}
 			_moveRoutine = null;
